@@ -1,0 +1,22 @@
+1>The first line
+2>
+3>And another line
+4>I 3
+3>The second line
+4>One more line
+5>A
+5>s
+5>L
+1>The first line
+2>
+3>The second line
+4>One more lines
+5>And another line
+5>D 2
+4>L
+1>The first line
+2>The second line
+3>One more lines
+4>And another line
+4>S lines.txt
+4>E
