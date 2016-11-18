@@ -4,10 +4,11 @@ And another line
 I 3
 The second line
 One more line
-A
-s
 L
 D 2
 L
-S lines.txt
+A
+Last line
+L
+S test.txt
 E

@@ -4,19 +4,25 @@
 4>I 3
 3>The second line
 4>One more line
-5>A
-5>s
 5>L
 1>The first line
 2>
 3>The second line
-4>One more lines
+4>One more line
 5>And another line
 5>D 2
 4>L
 1>The first line
 2>The second line
-3>One more lines
+3>One more line
 4>And another line
-4>S lines.txt
-4>E
+4>A
+5>Last line
+6>L
+1>The first line
+2>The second line
+3>One more line
+4>And another line
+5>Last line
+6>S test.txt
+6>E

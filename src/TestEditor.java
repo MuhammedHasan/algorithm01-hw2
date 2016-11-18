@@ -3,11 +3,9 @@ import java.io.*;
 
 public class TestEditor {
 
-    private int index;
-    private boolean isAppend;
-
     private LinkedList<String> lines;
     private ArrayList<String> commands;
+    private int index;
 
     private TestEditor() {
         this.index = 0;
@@ -32,7 +30,7 @@ public class TestEditor {
     }
 
     private void delete(int i, int j) {
-        for (; i < j; i++) {
+        for (; i <= j; i++) {
             if (this.index >= i)
                 this.index--;
             this.lines.remove(i);
@@ -42,13 +40,6 @@ public class TestEditor {
     private void list() {
         for (int i = 0; i < this.lines.size(); i++)
             this.commands.add(i + 1 + ">" + this.lines.get(i));
-    }
-
-    private void append(String text) {
-        this.index--;
-        String updatedLine = this.lines.remove(this.index) + text;
-        this.add(updatedLine);
-        this.isAppend = false;
     }
 
     private void save(String filename) throws IOException {
@@ -70,10 +61,7 @@ public class TestEditor {
     private void execute(String input) throws IOException {
         this.commands.add(this.index + 1 + ">" + input);
 
-        if (this.isAppend)
-            this.append(input);
-
-        else if (input.equals("I"))
+        if (input.equals("I"))
             this.index--;
 
         else if (input.matches("I\\s[0-9]"))
@@ -92,7 +80,7 @@ public class TestEditor {
             this.list();
 
         else if (input.equals("A"))
-            this.isAppend = true;
+            this.index = this.lines.size();
 
         else if (input.startsWith("S "))
             this.save(input.split(" ")[1]);
